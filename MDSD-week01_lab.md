@@ -833,13 +833,10 @@ source ~/.zshrc
 
 ```bash
 # ดู Hardware Profile ที่ใช้ได้
-avdmanager list device | grep -i pixel
+avdmanager list device 
 
 # สร้าง Emulator (Pixel 7, Android 14, x86_64)
-avdmanager create avd \
-  --name "Pixel7_API34" \
-  --package "system-images;android-34;google_apis;x86_64" \
-  --device "pixel_7"
+avdmanager create avd --name "Pixel7_API34" --package "system-images;android-34;google_apis;x86_64" --device "pixel_7"
 
 # ตรวจสอบว่าสร้างสำเร็จ
 avdmanager list avd
